@@ -12,9 +12,17 @@
     <script>
         function handleCredentialResponse(response) {
             const data = jwt_decode(response.credential)
+            const gameSection = document.querySelector('.game')
+            const loginSection = document.querySelector('.login')
             console.log(data);
             if (data) {
-                window.location.href = "http://localhost:5500/game.html"
+                if((data.email).includes('@grupootg') || (data.email).includes('@compayz')){
+                    gameSection.classList.remove('hide-me')
+                    loginSection.classList.add("hide-me")
+
+                }else{
+                    console.log('Por favor, entre com seu e-mail corporativo!')
+                }
             }
         }
         window.onload = function () {
@@ -38,6 +46,15 @@
     </script>
 </head>
 <body>
-    <div id="buttonDiv"></div>
+    <section class="login">
+        <div id="buttonDiv"></div>
+        <div class="login-error hide-me">
+            <img src="" alt="">
+            <h2>Por favor, faça o login com seu e-mail corporativo!</h2>
+        </div>
+    </section>
+    <section class="game hide-me">
+        <img class="low" id="ball-img" src="./img/BOLA (1).png" alt="">
+    </section>
 </body>
 </html>
