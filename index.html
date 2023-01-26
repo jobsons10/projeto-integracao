@@ -8,23 +8,9 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="https://unpkg.com/jwt-decode/build/jwt-decode.js"></script>
+    <script src="./app.js"></script>
 
     <script>
-        function handleCredentialResponse(response) {
-            const data = jwt_decode(response.credential)
-            const gameSection = document.querySelector('.game')
-            const loginSection = document.querySelector('.login')
-            console.log(data);
-            if (data) {
-                if((data.email).includes('@grupootg') || (data.email).includes('@compayz')){
-                    gameSection.classList.remove('hide-me')
-                    loginSection.classList.add("hide-me")
-
-                }else{
-                    console.log('Por favor, entre com seu e-mail corporativo!')
-                }
-            }
-        }
         window.onload = function () {
           google.accounts.id.initialize({
             client_id: "13249429763-m79s2dnic1pj92knnabb1c149atgs5i2.apps.googleusercontent.com",
@@ -46,6 +32,12 @@
     </script>
 </head>
 <body>
+    <section class="logos">
+        <div class="logo logo-tc"><img src="./img/Sem fundo.png" alt=""></div>
+        <div class="logo logo-r10"><img src="./img/Sem fundo.png" alt=""></div>
+        <div class="logo logo-umb"><img src="./img/Sem fundo.png" alt=""></div>
+        <div class="logo logo-cpz"><img src="./img/Sem fundo.png" alt=""></div>
+    </section>
     <section class="login">
         <div id="buttonDiv"></div>
         <div class="login-error hide-me">

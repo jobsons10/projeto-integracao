@@ -3,6 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+@keyframes logo-slide {
+    0%{
+        top: 0;
+        /* transform: translatey(-100%); */
+    }
+    100%{
+        top: 100px;
+        /* transform: translateY(0); */
+    }
+}
 @keyframes medium {
     0%{
         top: 73%;
@@ -118,4 +128,18 @@
 /* esconder divs */
 .hide-me{
     display: none;
+}
+
+/* Div logos */
+
+.logo img{
+    width: 25vw;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+.logo-active{
+    animation: logo-slide 2s 1 direction fill-mode;
+    top: 50%;
 }
