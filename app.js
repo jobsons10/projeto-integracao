@@ -15,8 +15,20 @@ function handleCredentialResponse(response) {
             const logoR10 = document.querySelector('.logo-r10')
             const logoUmb = document.querySelector('.logo-umb')
             const logoCpz = document.querySelector('.logo-cpz')
+            const bgCpz = document.querySelector('.bg-cpz')
             logoCpz.classList.add('logo-active')
             buttonDiv.classList.add("hide-me")
+            setTimeout(() => {
+                bgCpz.classList.add('active')
+                setTimeout(() => {
+                    loginSection.classList.add('hide-me')
+                    gameSection.classList.remove('hide-me')
+                    setTimeout(() => {
+                        logoCpz.classList.add('hide-me');
+                    },2400)
+                },2500)
+            },2500)
+            
 
 
             // loginSection.classList.add("hide-me")
