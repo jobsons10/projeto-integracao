@@ -1,59 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="https://unpkg.com/jwt-decode/build/jwt-decode.js"></script>
     <script src="./app.js"></script>
 
     <script>
-        window.onload = function () {
-          google.accounts.id.initialize({
-            client_id: "13249429763-m79s2dnic1pj92knnabb1c149atgs5i2.apps.googleusercontent.com",
-            callback: handleCredentialResponse
-          });
-          google.accounts.id.renderButton(
-            document.getElementById("buttonDiv"),
-            { 
-                size: "large",
-                type: "standard",
-                shape: "pill",
-                theme: "filled_black",
-                text: "signin_with",
-                logo_alignment: "left"
-                }  // customization attributes
-          );
-          google.accounts.id.prompt(); // also display the One Tap dialog
-        }
+      window.onload = function () {
+        google.accounts.id.initialize({
+          client_id:
+            "13249429763-m79s2dnic1pj92knnabb1c149atgs5i2.apps.googleusercontent.com",
+          callback: handleCredentialResponse,
+        });
+        google.accounts.id.renderButton(
+          document.getElementById("buttonDiv"),
+          {
+            size: "large",
+            type: "standard",
+            shape: "pill",
+            theme: "filled_black",
+            text: "signin_with",
+            logo_alignment: "left",
+          } // customization attributes
+        );
+        google.accounts.id.prompt(); // also display the One Tap dialog
+      };
     </script>
-</head>
-<body>
-        <img class="logo logo-tc" src="./img/logo-tc.png" alt="">
-        <img class="logo logo-r10" src="./img/logo-r10.png" alt="">
-        <img class="logo logo-umb" src="./img/logo-umb.png" alt="">
-        <img class="logo logo-cpz" src="./img/logo-cpz.webp" alt="">
+  </head>
+  <body>
+    <img class="logo logo-tc" src="./img/logo-tc.png" alt="" />
+    <img class="logo logo-r10" src="./img/logo-r10.png" alt="" />
+    <img class="logo logo-umb" src="./img/logo-umb.png" alt="" />
+    <img class="logo logo-cpz" src="./img/logo-cpz.webp" alt="" />
     <section class="login">
-        <div id="buttonDiv"></div>
-        <div class="login-error hide-me">
-            <img src="./img/warning-svg.svg" alt="">
-            <h2>Por favor, faça o login com seu e-mail corporativo!</h2>
-            <button id="button-login-error">OK</button>
-        </div>
+      <div id="buttonDiv"></div>
+      <div class="login-error hide-me">
+        <img src="./img/warning-svg.svg" alt="" />
+        <h2>Por favor, faça o login com seu e-mail corporativo!</h2>
+        <button id="button-login-error">OK</button>
+      </div>
     </section>
     <section class="game hide-me">
-        <img id="ball-img" src="./img/BOLA (1).png" alt="">
+      <img id="ball-img" src="./img/BOLA (1).png" alt="" />
     </section>
     <section class="bg bg-logo">
-        <div class="bg bg-tc"></div>
-        <div class="bg bg-r10"></div>
-        <div class="bg bg-umb"></div>
-        <div class="bg bg-cpz"></div>
+      <div class="bg bg-tc"></div>
+      <div class="bg bg-r10"></div>
+      <div class="bg bg-umb"></div>
+      <div class="bg bg-cpz"></div>
     </section>
-    <section class="award hide-me">
-    </section>
-</body>
+    <section class="award hide-me"></section>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player
+    class="hide-me lottie"
+      src="https://assets10.lottiefiles.com/packages/lf20_0oco6l9x.json"
+      background="transparent"
+      speed="0.7"
+      style="width: 300px; height: auto; z-index: 9999999;"
+      autoplay
+    ></lottie-player>
+  </body>
 </html>
