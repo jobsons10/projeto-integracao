@@ -132,12 +132,31 @@
 .login-error{
     width: 80%;
     border: grey 1px solid;
-    height: 150px;
-    border-radius: 14px;
+    padding: 11px;
+    /* border-radius: 14px; */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+.login-error img{
+    width: 75px;
+}
+.login-error h2{
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 300;
+    color: #fff;
+}
+.login-error button{
+    padding: 10px 32px;
+    margin-top: 8px;
 }
 .login{
     background-image: url('../img/bg-login.jpg');
@@ -147,10 +166,6 @@
 }
 
 
-/* esconder divs */
-.hide-me{
-    display: none;
-}
 
 /* Div logos */
 
@@ -179,10 +194,28 @@
     width: 0;
     height: 0;
 }
-.bg-cpz{
+.bg{
     background-color: rgb(46, 43, 43);
 }
 .bg.active{
     animation: logo-bg 5s ease-out 1;
     border-radius: 50%;
 }
+  
+/* section award */
+  .award{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/TELA-DOBRA\ 2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  
+  
+  
+    /* esconder divs */
+    .hide-me{
+        display: none;
+    }
